@@ -97,9 +97,12 @@ app.get('/cron/list',async (req, res, next) => {
 });
 
 
-const port = 8097;
+const port = 42048;
 app.listen(port, () =>{
     console.log(`ms_cron is running at http://localhost:${port}`)
+    getCronStatus().forEach(job => {
+        Log.info(`${job.name} | ${job.running} | ${job.scheduled}`)
+    })
 })
 
 function getCronStatus(){

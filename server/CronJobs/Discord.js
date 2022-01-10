@@ -10,7 +10,7 @@ let jobs = {
             getCronStatus()
         },
         null,
-        true
+        false
     )
 }
 
@@ -19,7 +19,6 @@ function getCronStatus(){
     Object.keys(jobs).forEach( key => {
         let job = jobs[key],
             running = (job.running === undefined) ? false : job.running
-        job.
 
         o.push({
             name:key,
@@ -33,7 +32,7 @@ function getCronStatus(){
 
 
 function cron_loop(){
-    Log.info("Discord")
+    Log.info("Discord cronjob nur zum test")
 }
 
 
